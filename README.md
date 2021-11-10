@@ -1,3 +1,3 @@
 # HospitalGame
 Main project of Bu-Ali sina university.
-project number 13:
+project number 13
