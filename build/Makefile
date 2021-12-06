@@ -57,10 +57,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/aminbazdar/Desktop/HospitalGame
+CMAKE_SOURCE_DIR = /Users/aminbazdar/Desktop/ACPP_project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/aminbazdar/Desktop/HospitalGame/build
+CMAKE_BINARY_DIR = /Users/aminbazdar/Desktop/ACPP_project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/aminbazdar/Desktop/HospitalGame/build/CMakeFiles /Users/aminbazdar/Desktop/HospitalGame/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/aminbazdar/Desktop/ACPP_project/build/CMakeFiles /Users/aminbazdar/Desktop/ACPP_project/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/aminbazdar/Desktop/HospitalGame/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/aminbazdar/Desktop/ACPP_project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -225,6 +225,30 @@ sources/patient.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/sources/patient.cpp.s
 .PHONY : sources/patient.cpp.s
 
+sources/person.o: sources/person.cpp.o
+.PHONY : sources/person.o
+
+# target to build an object file
+sources/person.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/sources/person.cpp.o
+.PHONY : sources/person.cpp.o
+
+sources/person.i: sources/person.cpp.i
+.PHONY : sources/person.i
+
+# target to preprocess a source file
+sources/person.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/sources/person.cpp.i
+.PHONY : sources/person.cpp.i
+
+sources/person.s: sources/person.cpp.s
+.PHONY : sources/person.s
+
+# target to generate assembly for a file
+sources/person.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/sources/person.cpp.s
+.PHONY : sources/person.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -246,6 +270,9 @@ help:
 	@echo "... sources/patient.o"
 	@echo "... sources/patient.i"
 	@echo "... sources/patient.s"
+	@echo "... sources/person.o"
+	@echo "... sources/person.i"
+	@echo "... sources/person.s"
 .PHONY : help
 
 

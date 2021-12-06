@@ -1,5 +1,5 @@
 CMakeFiles/exe.dir/sources/main.cpp.o: \
-  /Users/aminbazdar/Desktop/HospitalGame/sources/main.cpp \
+  /Users/aminbazdar/Desktop/ACPP_project/sources/main.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/pthread.h \
@@ -224,8 +224,9 @@ CMakeFiles/exe.dir/sources/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__bsd_locale_defaults.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/bitset \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__bit_reference \
-  /Users/aminbazdar/Desktop/HospitalGame/include/hospital.hpp \
+  /Users/aminbazdar/Desktop/ACPP_project/include/hospital.hpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__split_buffer \
-  /Users/aminbazdar/Desktop/HospitalGame/include/doctor.hpp \
-  /Users/aminbazdar/Desktop/HospitalGame/include/patient.hpp
+  /Users/aminbazdar/Desktop/ACPP_project/include/doctor.hpp \
+  /Users/aminbazdar/Desktop/ACPP_project/include/person.hpp \
+  /Users/aminbazdar/Desktop/ACPP_project/include/patient.hpp

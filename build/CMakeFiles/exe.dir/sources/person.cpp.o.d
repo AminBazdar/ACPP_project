@@ -1,5 +1,5 @@
-CMakeFiles/exe.dir/sources/doctor.cpp.o: \
-  /Users/aminbazdar/Desktop/ACPP_project/sources/doctor.cpp \
+CMakeFiles/exe.dir/sources/person.cpp.o: \
+  /Users/aminbazdar/Desktop/ACPP_project/sources/person.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/pthread.h \
@@ -138,5 +138,4 @@ CMakeFiles/exe.dir/sources/doctor.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/wctype.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/wctype.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/_types/_wctrans_t.h \
-  /Users/aminbazdar/Desktop/ACPP_project/include/doctor.hpp \
   /Users/aminbazdar/Desktop/ACPP_project/include/person.hpp

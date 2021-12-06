@@ -1,5 +1,5 @@
 CMakeFiles/exe.dir/sources/hospital.cpp.o: \
-  /Users/aminbazdar/Desktop/HospitalGame/sources/hospital.cpp \
+  /Users/aminbazdar/Desktop/ACPP_project/sources/hospital.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/pthread.h \
@@ -226,6 +226,7 @@ CMakeFiles/exe.dir/sources/hospital.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__bit_reference \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__split_buffer \
-  /Users/aminbazdar/Desktop/HospitalGame/include/doctor.hpp \
-  /Users/aminbazdar/Desktop/HospitalGame/include/patient.hpp \
-  /Users/aminbazdar/Desktop/HospitalGame/include/hospital.hpp
+  /Users/aminbazdar/Desktop/ACPP_project/include/doctor.hpp \
+  /Users/aminbazdar/Desktop/ACPP_project/include/person.hpp \
+  /Users/aminbazdar/Desktop/ACPP_project/include/patient.hpp \
+  /Users/aminbazdar/Desktop/ACPP_project/include/hospital.hpp

@@ -1,5 +1,5 @@
 CMakeFiles/exe.dir/sources/patient.cpp.o: \
-  /Users/aminbazdar/Desktop/HospitalGame/sources/patient.cpp \
+  /Users/aminbazdar/Desktop/ACPP_project/sources/patient.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/pthread.h \
@@ -224,4 +224,5 @@ CMakeFiles/exe.dir/sources/patient.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__bsd_locale_defaults.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/bitset \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__bit_reference \
-  /Users/aminbazdar/Desktop/HospitalGame/include/patient.hpp
+  /Users/aminbazdar/Desktop/ACPP_project/include/patient.hpp \
+  /Users/aminbazdar/Desktop/ACPP_project/include/person.hpp

@@ -1,16 +1,20 @@
 #ifndef PATIENT_HPP
 #define PATIENT_HPP
 
-class patient
+#include "person.hpp"
+
+class patient : public person
 {
 public:
     enum class demand {SURGERY = 1, PILL, VISIT, CURED};        //patient states
-    patient(patient::demand);                                   // patient constructor
+    patient(std::string, patient::demand);                      // patient constructor
 
     void setDemand(patient::demand);
     patient::demand getDemand() const;
 
     void printState();
+
+    void makeAbstract() { };
 private:
     patient::demand patientDemand;                             //patient state
 };  

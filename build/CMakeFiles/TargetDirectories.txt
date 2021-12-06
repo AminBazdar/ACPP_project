@@ -1,3 +1,3 @@
-/Users/aminbazdar/Desktop/HospitalGame/build/CMakeFiles/rebuild_cache.dir
-/Users/aminbazdar/Desktop/HospitalGame/build/CMakeFiles/edit_cache.dir
-/Users/aminbazdar/Desktop/HospitalGame/build/CMakeFiles/exe.dir
+/Users/aminbazdar/Desktop/ACPP_project/build/CMakeFiles/rebuild_cache.dir
+/Users/aminbazdar/Desktop/ACPP_project/build/CMakeFiles/edit_cache.dir
+/Users/aminbazdar/Desktop/ACPP_project/build/CMakeFiles/exe.dir

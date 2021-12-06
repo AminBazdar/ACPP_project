@@ -5,5 +5,6 @@ add_executable(exe
     sources/main.cpp 
     sources/hospital.cpp 
     sources/patient.cpp
-    sources/doctor.cpp)
+    sources/doctor.cpp
+    sources/person.cpp)
 include_directories(include)

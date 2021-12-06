@@ -11,7 +11,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/aminbazdar/Desktop/HospitalGame/build"
+			"value" : "/Users/aminbazdar/Desktop/ACPP_project/build"
 		},
 		{
 			"name" : "AP_SOURCE_DIR",
@@ -23,7 +23,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/aminbazdar/Desktop/HospitalGame"
+			"value" : "/Users/aminbazdar/Desktop/ACPP_project"
 		},
 		{
 			"name" : "CMAKE_ADDR2LINE",
@@ -79,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/aminbazdar/Desktop/HospitalGame/build"
+			"value" : "/Users/aminbazdar/Desktop/ACPP_project/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -567,7 +567,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/aminbazdar/Desktop/HospitalGame"
+			"value" : "/Users/aminbazdar/Desktop/ACPP_project"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",

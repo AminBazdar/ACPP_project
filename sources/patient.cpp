@@ -3,7 +3,7 @@
 
 using namespace std;
 
-patient::patient(patient::demand demand)
+patient::patient(string name, patient::demand demand) : person(name)
 {
     setDemand(demand);
 }
