@@ -2,75 +2,96 @@
 #include <string>
 #include <stdexcept>
 #include <vector>
-#include "doctor.hpp"
-#include "patient.hpp"
-#include "hospital.hpp"
+#include "include/doctor.hpp"
+#include "include/patient.hpp"
+#include "include/hospital.hpp"
 
 using namespace std;
 
-hospital::hospital(string hospitalName, hospital::difficulty gameDiff)
+hospital::hospital(string gameDiff)
 {
-    setName(hospitalName);
-    this->gameDiff = gameDiff;
-
-    switch (gameDiff)               //in different difficulty player has different doc and coin nos
+    if (gameDiff == "easy")
     {
-    case difficulty::EASY:          
-        doctors.resize(5);
-        this->coin = 20;
-        break;
-    
-    case difficulty::NORMAL:
-        doctors.resize(3);
-        this->coin = 15;
-        break;
-        
-    case difficulty::HARD:
-        doctors.resize(2);
-        this->coin = 10;
-        break;
+        this->gameDiff = hospital::difficulty::EASY;
+        incCoin(20);
+        doctor temp(doctor::specialties::SURGEON);
+        doctor temp2(doctor::specialties::PHYSICIAN);
+        physicianDoc.push_back(temp);
+        physicianDoc.push_back(temp);
+        physicianDoc.push_back(temp2);
+        surgeonDoc.push_back(temp2);
+        surgeonDoc.push_back(temp2);
     }
+    else if (gameDiff == "medium")
+    {
+        this->gameDiff = hospital::difficulty::NORMAL;
+        incCoin(15);
+        doctor temp(doctor::specialties::SURGEON);
+        doctor temp2(doctor::specialties::PHYSICIAN);
+        physicianDoc.push_back(temp);
+        physicianDoc.push_back(temp);
+        surgeonDoc.push_back(temp2);
+        surgeonDoc.push_back(temp2);
+    }
+    else if (gameDiff == "hard")
+    {
+        this->gameDiff = hospital::difficulty::HARD;
+        incCoin(10);
+        doctor temp(doctor::specialties::SURGEON);
+        doctor temp2(doctor::specialties::PHYSICIAN);
+        physicianDoc.push_back(temp);
+        surgeonDoc.push_back(temp2);
+    }
+    
+    
 }          
-
-void hospital::setName(string hospitalName)
-{
-    this->hospitalName = hospitalName;
-}
-
-std::string hospital::getName() const
-{
-    return hospitalName;
-}
 
 hospital::difficulty hospital::getDifficulty() const
 {
     return gameDiff;
 }
 
-void hospital::addDoctor(unsigned int doc)
-{
-    switch (getDifficulty())        //adding doctor cost is different in any difficulty
-    {
-    case difficulty::EASY:
-        decCoin(doc*5);             // cost is 5
-        break;
+// void hospital::addDoctor(doctor doc)
+// {
+//     switch (getDifficulty())        //adding doctor cost is different in any difficulty
+//     {
+//     case difficulty::EASY:
+//         decCoin(doc*5);             // cost is 5
+//         break;
     
-    case difficulty::NORMAL:
-        decCoin(doc*10);            // cost is 10
-        break;
+//     case difficulty::NORMAL:
+//         decCoin(doc*10);            // cost is 10
+//         break;
 
-    case difficulty::HARD:
-        decCoin(doc*15);            //cost is 15
-        break;
-    }
-    doctor temp;
-    doctors.push_back(temp);
+//     case difficulty::HARD:
+//         decCoin(doc*15);            //cost is 15
+//         break;
+//     }
+    
+//     if (doc.getSpecialty() == doctor::specialties::SURGEON)
+//     {
+//         surgeonDoc.push_back(doc);
+//     }
+//     else if (doc.getSpecialty() == doctor::specialties::PHYSICIAN)
+//     {
+//         physicianDoc.push_back(doc);
+//     }
+// }
+
+// unsigned int hospital::getDoctor() const
+// {
+//     return doctors.size();
+    
+// }
+
+int hospital::getPhysician()
+{
+  return physicianDoc.size();
 }
 
-unsigned int hospital::getDoctor() const
+int hospital::getSurgeon()
 {
-    return doctors.size();
-    
+  return surgeonDoc.size();
 }
 
 void hospital::incCoin(unsigned int coin)
@@ -94,58 +115,45 @@ unsigned int hospital::getCoin() const
 
 void hospital::treat(patient& p)
 {
-    bool find = false;
-    for (size_t i = 0; i < doctors.size() && !find; i++)
+    if (p.getDemand() == patient::demand::SURGERY)
     {
-        if (!doctors[i].isBusy())
+        if (surgeonDoc.size() == 0)
         {
-            find = true;
-            switch (p.getDemand())
+            throw invalid_argument("There is no surgeon in hospital");
+        }
+        for (size_t i = 0; i < surgeonDoc.size(); i++)
+        {
+            if (!(surgeonDoc[i].isBusy()))
             {
-            case patient::demand::SURGERY:
-                incCoin(3);                // surgery fee is 10
+                surgeonDoc[i].changeState();
+                incCoin(5);
                 p.setDemand(patient::demand::CURED);
-                break;
-            
-            case patient::demand::VISIT:
-                incCoin(2);
-                p.setDemand(patient::demand::CURED);
-                break;
-
-            case patient::demand::PILL:
-                incCoin(1);
-                p.setDemand(patient::demand::CURED);
-                break;
-            
-            case patient::demand::CURED:
-                throw invalid_argument("Patient cured before");
-                break;
+                return;
             }
         }
-    }
-    if (!find)
-    {
-        throw invalid_argument("There is no Unemployed doctor");
-    }
-}
+        throw invalid_argument("All of surgeons are busy !!!");
 
-void hospital::print() const
-{
-    cout << "Name: " << getName() << endl;
-    switch (getDifficulty())
-    {
-    case difficulty::EASY :
-        cout << "Difficulty: Easy" << endl;
-        break;
-    
-    case difficulty::NORMAL:
-        cout << "Difficulty: Normal" << endl;
-        break;
-    
-    case difficulty::HARD:
-        cout << "Difficulty: Hard" << endl;
-        break;
     }
-    cout << "Number of docs: " << getDoctor() << endl;
-    cout << "Number of coins: " << getCoin() << endl;
+    else
+    {
+        for (size_t i = 0; i < physicianDoc.size(); i++)
+        {
+            if (!(physicianDoc[i].isBusy()))
+            {
+                surgeonDoc[i].changeState();
+                if (p.getDemand() == patient::demand::PILL)
+                {
+                    incCoin(2);
+                }
+                else if (p.getDemand() == patient::demand::VISIT)
+                {
+                    incCoin(1);
+                }
+                p.setDemand(patient::demand::CURED);
+
+                return;
+            }
+        }
+        throw invalid_argument("All of physicians are busy !!!");
+    }
 }

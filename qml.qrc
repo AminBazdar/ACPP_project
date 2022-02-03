@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Welcome.qml</file>
+        <file>assets/images/background1.jpg</file>
+        <file>assets/images/background2.jpg</file>
+        <file>assets/sounds/mainSound.m4a</file>
+        <file>assets/images/background3.jpg</file>
+        <file>GamePage.qml</file>
+        <file>assets/images/coinIcon.png</file>
+        <file>assets/images/clock.png</file>
+        <file>assets/images/youLose.gif</file>
+        <file>assets/images/youWin.jpg</file>
+        <file>Winning.qml</file>
+        <file>assets/images/goldenCup.png</file>
+        <file>assets/images/chickenDinner.png</file>
+        <file>assets/sounds/winning sound.m4a</file>
+        <file>assets/sounds/losing sound.m4a</file>
+        <file>assets/sounds/clicking.m4a</file>
+    </qresource>
+</RCC>

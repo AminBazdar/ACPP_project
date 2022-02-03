@@ -1,23 +1,23 @@
 #ifndef DOCTOR_HPP
 #define DOCTOR_HPP
 
-#include "person.hpp"
-
-class doctor : public person
+class doctor
 {
 public:
     enum class specialties {SURGEON, PHYSICIAN};
-    
-    doctor() { }
-    doctor(std::string, doctor::specialties);
-    ~doctor() {}            
+
+    doctor(){ }
+    doctor(doctor::specialties);
+    ~doctor() {}
 
     void setSpecialty(doctor::specialties);
     doctor::specialties getSpecialty();
 
-    void makeAbstract() { };
+    void changeState();
+    bool isBusy();
 private:
     doctor::specialties specialty;
+    bool busy = false;
 };
 
 
