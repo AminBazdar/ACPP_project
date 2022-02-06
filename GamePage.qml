@@ -6,7 +6,7 @@ import connect 1.0
 Item {
     id: game
     anchors.fill: parent
-    property int timerVal: 10
+    property int timerVal: 120
     property int tempVal: 0
 
     Image {
@@ -23,7 +23,7 @@ Item {
             surgeons.text = connection.totalSurgeons
             physicianPatient.start()
             surgeonPatient.start()
-            timerVal = 10
+            timerVal = 120
             timerr.start()
         }
 
